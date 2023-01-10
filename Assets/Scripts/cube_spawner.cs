@@ -32,14 +32,14 @@ public class cube_spawner : MonoBehaviour
      if (time >= spawnSpeed && numberSpawned<limitSpawned)
         {
             Debug.Log(time);
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range (0f,Screen.width), Random.Range(0f,Screen.height), Random.Range(10f, 30f)));
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Random.Range (0f,Screen.width), Random.Range(0f,Screen.height), Random.Range(30f, 100f)));
             spawnedObject = Instantiate(objectToSpawned);
             spawnedObject.position = worldPosition;
             numberSpawned++;
             spawnList.Add(spawnedObject);
             time = 0f;
         }
-        
+     
   }
 
     
